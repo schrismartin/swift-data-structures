@@ -1,41 +1,19 @@
 import Foundation
 
-struct LinkedList<Element> {
-    
-    public final class Node<Element>: CustomStringConvertible {
-        
-        fileprivate var next: Node<Element>?
-        fileprivate weak var previous: Node<Element>?
-        
-        public var value: Element
-        
-        fileprivate var isFirst: Bool {
-            return previous == nil
-        }
-        
-        fileprivate var isLast: Bool {
-            return next == nil
-        }
-        
-        init(value: Element) {
-            self.value = value
-        }
-        
-        fileprivate func markForRemoval() {
-            // Bookkeeping
-            next?.previous = previous
-            previous?.next = next
-        }
-        
-        public var description: String {
-            return String(describing: value)
-        }
-    }
+struct LinkedList<Element>: ExpressibleByArrayLiteral {
     
     fileprivate(set) public var first: Node<Element>?
     fileprivate(set) public var last: Node<Element>?
     
     fileprivate(set) public var count: Int = 0
+        
+    init(array: [Element]) {
+        array.forEach { pushBack(item: $0) }
+    }
+    
+    init(arrayLiteral elements: Element...) {
+        self.init(array: elements)
+    }
     
 }
 
@@ -43,7 +21,7 @@ struct LinkedList<Element> {
 extension LinkedList {
     
     public var isEmpty: Bool {
-        return first == nil && last == nil
+        return count == 0
     }
     
 }
@@ -56,7 +34,16 @@ extension LinkedList {
     }
     
     func node(at index: Int) -> Node<Element>? {
-        return first
+        let range = 0 ..< count
+        guard range.contains(index) else { return nil }
+        
+        var node = first
+        for _ in 0 ..< index {
+            // If we've reached a nil node, exit early
+            node = node?.next
+        }
+        
+        return node
     }
     
     func node(after node: Node<Element>) -> Node<Element>? {
@@ -126,7 +113,8 @@ extension LinkedList {
         return node
     }
     
-    public mutating func remove(node: Node<Element>) {
+    @discardableResult
+    public mutating func remove(node: Node<Element>) -> Element {
         if node.isFirst {
             first = node.next
         }
@@ -138,6 +126,8 @@ extension LinkedList {
         count -= 1
         
         node.markForRemoval()
+        
+        return node.value
     }
 }
 
@@ -158,18 +148,14 @@ extension LinkedList {
     
     @discardableResult
     public mutating func popBack() -> Element? {
-        guard let node = last else { return nil }
-        remove(node: node)
-        
-        return node.value
+        guard let lastNode = last else { return nil }
+        return remove(node: lastNode)
     }
     
     @discardableResult
     public mutating func popFront() -> Element? {
-        guard let node = first else { return nil }
-        remove(node: node)
-        
-        return node.value
+        guard let firstNode = first else { return nil }
+        return remove(node: firstNode)
     }
     
 }
@@ -187,16 +173,6 @@ extension LinkedList {
         }
         
         return array
-    }
-    
-}
-
-extension LinkedList: ExpressibleByArrayLiteral {
-    
-    init(arrayLiteral elements: Element...) {
-        
-        elements.forEach { pushBack(item: $0) }
-        
     }
     
 }

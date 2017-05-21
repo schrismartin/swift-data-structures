@@ -1,0 +1,4 @@
+ignore:
+  - "Tests"
+  - "Tests/SwiftDataStructuresTests/*"
+  - "**/*Tests.swift"

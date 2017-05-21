@@ -1,0 +1,16 @@
+os:
+  - osx
+language: generic
+sudo: required
+dist: trusty
+osx_image: xcode8
+script:
+  # use instead of `swift test` to generate code coverage profile
+  - swift package generate-xcodeproj --enable-code-coverage
+  - xcodebuild -scheme SwiftDataStructures -enableCodeCoverage YES test | xcpretty
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+notifications:
+  email:
+    on_success: never
+    on_failure: change
