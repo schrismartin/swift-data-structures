@@ -2,36 +2,6 @@ import Foundation
 
 struct LinkedList<Element> {
     
-    public final class Node<Element>: CustomStringConvertible {
-        
-        fileprivate var next: Node<Element>?
-        fileprivate weak var previous: Node<Element>?
-        
-        public var value: Element
-        
-        fileprivate var isFirst: Bool {
-            return previous == nil
-        }
-        
-        fileprivate var isLast: Bool {
-            return next == nil
-        }
-        
-        init(value: Element) {
-            self.value = value
-        }
-        
-        fileprivate func markForRemoval() {
-            // Bookkeeping
-            next?.previous = previous
-            previous?.next = next
-        }
-        
-        public var description: String {
-            return String(describing: value)
-        }
-    }
-    
     fileprivate(set) public var first: Node<Element>?
     fileprivate(set) public var last: Node<Element>?
     
@@ -43,7 +13,7 @@ struct LinkedList<Element> {
 extension LinkedList {
     
     public var isEmpty: Bool {
-        return first == nil && last == nil
+        return count == 0
     }
     
 }
@@ -56,7 +26,16 @@ extension LinkedList {
     }
     
     func node(at index: Int) -> Node<Element>? {
-        return first
+        let range = 0 ..< count
+        guard range.contains(index) else { return nil }
+        
+        var node = first
+        for _ in 0 ..< index {
+            // If we've reached a nil node, exit early
+            node = node?.next
+        }
+        
+        return node
     }
     
     func node(after node: Node<Element>) -> Node<Element>? {
@@ -126,7 +105,8 @@ extension LinkedList {
         return node
     }
     
-    public mutating func remove(node: Node<Element>) {
+    @discardableResult
+    public mutating func remove(node: Node<Element>) -> Element {
         if node.isFirst {
             first = node.next
         }
@@ -138,6 +118,8 @@ extension LinkedList {
         count -= 1
         
         node.markForRemoval()
+        
+        return node.value
     }
 }
 
