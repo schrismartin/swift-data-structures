@@ -1,11 +1,19 @@
 import Foundation
 
-struct LinkedList<Element> {
+struct LinkedList<Element>: ExpressibleByArrayLiteral {
     
     fileprivate(set) public var first: Node<Element>?
     fileprivate(set) public var last: Node<Element>?
     
     fileprivate(set) public var count: Int = 0
+        
+    init(array: [Element]) {
+        array.forEach { pushBack(item: $0) }
+    }
+    
+    init(arrayLiteral elements: Element...) {
+        self.init(array: elements)
+    }
     
 }
 
@@ -169,18 +177,6 @@ extension LinkedList {
         }
         
         return array
-    }
-    
-}
-
-extension LinkedList: ExpressibleByArrayLiteral {
-    
-    init(array: [Element]) {
-        array.forEach { pushBack(item: $0) }
-    }
-    
-    init(arrayLiteral elements: Element...) {
-        self.init(array: elements)
     }
     
 }
