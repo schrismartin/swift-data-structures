@@ -175,10 +175,12 @@ extension LinkedList {
 
 extension LinkedList: ExpressibleByArrayLiteral {
     
+    init(array: [Element]) {
+        array.forEach { pushBack(item: $0) }
+    }
+    
     init(arrayLiteral elements: Element...) {
-        
-        elements.forEach { pushBack(item: $0) }
-        
+        self.init(array: elements)
     }
     
 }
