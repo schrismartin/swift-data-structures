@@ -1,0 +1,103 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/schrismartin/Projects/SwiftDataStructures/Sources/LinkedList.swift",
+      "line": null,
+      "symbol": "LinkedList",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/schrismartin/Projects/SwiftDataStructures/Sources/LinkedList.swift",
+      "line": null,
+      "symbol": "LinkedList",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/schrismartin/Projects/SwiftDataStructures/Sources/LinkedList.swift",
+      "line": null,
+      "symbol": "LinkedList",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/schrismartin/Projects/SwiftDataStructures/Sources/LinkedList.swift",
+      "line": 23,
+      "symbol": "LinkedList.isEmpty",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/schrismartin/Projects/SwiftDataStructures/Sources/LinkedList.swift",
+      "line": 62,
+      "symbol": "LinkedList.removeAll()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/schrismartin/Projects/SwiftDataStructures/Sources/LinkedList.swift",
+      "line": 79,
+      "symbol": "LinkedList.insert(value:after:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/schrismartin/Projects/SwiftDataStructures/Sources/LinkedList.swift",
+      "line": 98,
+      "symbol": "LinkedList.insert(value:before:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/schrismartin/Projects/SwiftDataStructures/Sources/LinkedList.swift",
+      "line": 117,
+      "symbol": "LinkedList.remove(node:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/schrismartin/Projects/SwiftDataStructures/Sources/LinkedList.swift",
+      "line": 138,
+      "symbol": "LinkedList.pushBack(item:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/schrismartin/Projects/SwiftDataStructures/Sources/LinkedList.swift",
+      "line": 144,
+      "symbol": "LinkedList.pushFront(item:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/schrismartin/Projects/SwiftDataStructures/Sources/LinkedList.swift",
+      "line": 150,
+      "symbol": "LinkedList.popBack()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/schrismartin/Projects/SwiftDataStructures/Sources/LinkedList.swift",
+      "line": 156,
+      "symbol": "LinkedList.popFront()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/schrismartin/Projects/SwiftDataStructures/Sources/Node.swift",
+      "line": 11,
+      "symbol": "Node",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/schrismartin/Projects/SwiftDataStructures/Sources/Node.swift",
+      "line": 16,
+      "symbol": "Node.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/schrismartin/Projects/SwiftDataStructures"
+}

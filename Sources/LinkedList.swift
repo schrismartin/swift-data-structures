@@ -148,14 +148,14 @@ extension LinkedList {
     
     @discardableResult
     public mutating func popBack() -> Element? {
-        guard let node = last else { return nil }
-        return remove(node: node)
+        guard let lastNode = last else { return nil }
+        return remove(node: lastNode)
     }
     
     @discardableResult
     public mutating func popFront() -> Element? {
-        guard let node = first else { return nil }
-        return remove(node: node)
+        guard let firstNode = first else { return nil }
+        return remove(node: firstNode)
     }
     
 }
