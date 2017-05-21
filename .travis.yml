@@ -7,7 +7,7 @@ osx_image: xcode8
 script:
   # use instead of `swift test` to generate code coverage profile
   - swift package generate-xcodeproj --enable-code-coverage
-  - xcodebuild -scheme ExpenseKit -enableCodeCoverage YES test | xcpretty
+  - xcodebuild -scheme SwiftDataStructures -enableCodeCoverage YES test | xcpretty
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 notifications:
