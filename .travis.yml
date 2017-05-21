@@ -5,8 +5,9 @@ sudo: required
 dist: trusty
 osx_image: xcode8
 script:
-  - swift build
-  - swift test
+  # use instead of `swift test` to generate code coverage profile
+  - swift package generate-xcodeproj --enable-code-coverage
+  - xcodebuild -scheme ExpenseKit -enableCodeCoverage YES test | xcpretty
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 notifications:
