@@ -5,7 +5,6 @@
 [![codebeat badge](https://codebeat.co/badges/039e8071-b52a-4184-92f3-3ce9713a519f)](https://codebeat.co/projects/github-com-schrismartin-swift-data-structures-master)
 [![docs badge](http://schrismart.in/swift-data-structures/badge.svg)](http://schrismart.in/swift-data-structures)
 
-
 Collection of data structures written in the Swift programming language.
 
 ## Included Data Structures
