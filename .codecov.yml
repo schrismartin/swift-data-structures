@@ -1,2 +1,3 @@
 ignore:
   - "Tests"  # ignore folders and all its contents
+  - "**/*Tests.swift"
