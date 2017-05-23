@@ -1,6 +1,0 @@
-version: "Apple Swift version 3.1 (swiftlang-802.0.48 clang-802.0.38)"
-options: "2d5f356acb052652684a8f03dfd4234f"
-build_time: [548704454, 623265000]
-inputs:
-  "/Users/schrismartin/Projects/SwiftDataStructures/Sources/LinkedList.swift": [548701690, 0]
-  "/Users/schrismartin/Projects/SwiftDataStructures/Sources/Node.swift": [548697675, 0]
