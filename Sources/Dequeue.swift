@@ -10,7 +10,7 @@ import Foundation
 
 struct Dequeue<Element>: LinkedListInitializable {
     
-    var base = LinkedList<Element>()
+    internal var list = LinkedList<Element>()
     
 }
 
@@ -21,7 +21,7 @@ extension Dequeue: LinkedListDerivative { }
 extension Dequeue {
     
     public mutating func removeAll() {
-        base.removeAll()
+        list.removeAll()
     }
 
 }
@@ -30,21 +30,21 @@ extension Dequeue {
 extension Dequeue {
     
     public mutating func pushBack(item: Element) {
-        base.pushBack(item: item)
+        list.pushBack(item: item)
     }
     
     public mutating func pushFront(item: Element) {
-        base.pushFront(item: item)
+        list.pushFront(item: item)
     }
     
     @discardableResult
     public mutating func popBack() -> Element? {
-        return base.popBack()
+        return list.popBack()
     }
     
     @discardableResult
     public mutating func popFront() -> Element? {
-        return base.popFront()
+        return list.popFront()
     }
     
 }
@@ -53,7 +53,7 @@ extension Dequeue {
 extension Dequeue {
     
     var arrayValue: [Element] {
-        return base.arrayValue
+        return list.arrayValue
     }
     
 }
@@ -62,7 +62,7 @@ extension Dequeue {
 extension Dequeue: CustomStringConvertible {
     
     var description: String {
-        return base.description
+        return list.description
     }
     
 }

@@ -10,7 +10,7 @@ import Foundation
 
 struct Queue<Element>: LinkedListInitializable {
     
-    var base = LinkedList<Element>()
+    internal var list = LinkedList<Element>()
     
 }
 
@@ -21,7 +21,7 @@ extension Queue: LinkedListDerivative { }
 extension Queue {
     
     public mutating func removeAll() {
-        base.removeAll()
+        list.removeAll()
     }
     
 }
@@ -30,12 +30,12 @@ extension Queue {
 extension Queue {
     
     public mutating func pushBack(item: Element) {
-        base.pushBack(item: item)
+        list.pushBack(item: item)
     }
     
     @discardableResult
     public mutating func popFront() -> Element? {
-        return base.popFront()
+        return list.popFront()
     }
     
 }
@@ -44,7 +44,7 @@ extension Queue {
 extension Queue {
     
     var arrayValue: [Element] {
-        return base.arrayValue
+        return list.arrayValue
     }
     
 }
@@ -53,7 +53,7 @@ extension Queue {
 extension Queue: CustomStringConvertible {
     
     var description: String {
-        return base.description
+        return list.description
     }
     
 }

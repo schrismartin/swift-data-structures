@@ -11,7 +11,7 @@ import Foundation
 protocol LinkedListDerivative {
     associatedtype Element
     
-    var base: LinkedList<Element> { get set }
+    var list: LinkedList<Element> { get set }
     
     var first: Node<Element>? { get }
     var last: Node<Element>? { get }
@@ -22,19 +22,19 @@ protocol LinkedListDerivative {
 extension LinkedListDerivative {
     
     internal var first: Node<Element>? {
-        return base.first
+        return list.first
     }
     
     internal var last: Node<Element>? {
-        return base.last
+        return list.last
     }
     
     public var isEmpty: Bool {
-        return base.isEmpty
+        return list.isEmpty
     }
     
     public var count: Int {
-        return base.count
+        return list.count
     }
     
 }

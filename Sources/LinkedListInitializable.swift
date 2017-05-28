@@ -11,23 +11,24 @@ import Foundation
 protocol LinkedListInitializable: ExpressibleByArrayLiteral {
     associatedtype Element
     
-    var base: LinkedList<Element> { get set }
-    
-    init(list: LinkedList<Element>)
+    var list: LinkedList<Element> { get set }
     
     init()
+    
+    init(list: LinkedList<Element>)
     
 }
 
 extension LinkedListInitializable {
     
     init(list: LinkedList<Element>) {
-        self.init(array: list.arrayValue)
+        self.init()
+        self.list = list
     }
     
     init(array: [Element]) {
         self.init()
-        base = LinkedList(array: array)
+        list = LinkedList(array: array)
     }
     
     init(arrayLiteral elements: Element...) {

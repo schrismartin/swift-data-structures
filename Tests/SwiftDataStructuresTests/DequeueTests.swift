@@ -23,6 +23,14 @@ class DequeueTests: XCTestCase {
         XCTAssertEqual(dequeue.count, 10)
     }
     
+    func testLinkedListInitializeable() {
+        let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        let linkedList = LinkedList(array: array)
+        dequeue = Dequeue(list: linkedList)
+        
+        XCTAssertEqual(dequeue.arrayValue, array)
+    }
+    
     func testPushBack() {
         dequeue.pushBack(item: 0)
         
@@ -119,6 +127,7 @@ class DequeueTests: XCTestCase {
     }
     
     static var allTests = [
+        ("testLinkedListInitializeable", testLinkedListInitializeable),
         ("testPushBack", testPushBack),
         ("testPushFront", testPushFront),
         ("testPopFront", testPopFront),
