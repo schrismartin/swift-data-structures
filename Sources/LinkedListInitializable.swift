@@ -21,11 +21,6 @@ protocol LinkedListInitializable: ExpressibleByArrayLiteral {
 
 extension LinkedListInitializable {
     
-    init(list: LinkedList<Element>) {
-        self.init()
-        self.list = list
-    }
-    
     init(array: [Element]) {
         self.init()
         list = LinkedList(array: array)
