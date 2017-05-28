@@ -1,3 +1,11 @@
+//
+//  LinkedList.swift
+//  SwiftDataStructures
+//
+//  Created by Chris Martin on 5/20/17.
+//
+//
+
 import Foundation
 
 struct LinkedList<Element>: ExpressibleByArrayLiteral {

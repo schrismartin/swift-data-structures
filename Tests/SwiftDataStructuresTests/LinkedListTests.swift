@@ -25,30 +25,25 @@ class LinkedListTests: XCTestCase {
     }
     
     func testInsert() {
-        if let node = list[5] {
-            list.insert(value: 500, after: node)
-            XCTAssertEqual(list.count, 11)
-            XCTAssertEqual(list[6]?.value, 500)
-            
-            list.insert(value: 600, before: node)
-            XCTAssertEqual(list.count, 12)
-            XCTAssertEqual(list[5]?.value, 600)
-        }
-        else {
-            XCTAssert(false)
-        }
+        guard let node = list[5] else { XCTAssertFalse(false); return }
+        
+        list.insert(value: 500, after: node)
+        XCTAssertEqual(list.count, 11)
+        XCTAssertEqual(list[6]?.value, 500)
+        
+        list.insert(value: 600, before: node)
+        XCTAssertEqual(list.count, 12)
+        XCTAssertEqual(list[5]?.value, 600)
     }
     
     func testBeforeAfter() {
-        if let node = list[5] {
-            let next = list.node(after: node)
-            XCTAssertEqual(next?.value, 6)
-            
-            let prev = list.node(before: node)
-            XCTAssertEqual(prev?.value, 4)
-        } else {
-            XCTAssert(false)
-        }
+        guard let node = list[5] else { XCTAssertFalse(false); return }
+        
+        let next = list.node(after: node)
+        XCTAssertEqual(next?.value, 6)
+        
+        let prev = list.node(before: node)
+        XCTAssertEqual(prev?.value, 4)
     }
     
     func testPushBack() {
@@ -77,7 +72,7 @@ class LinkedListTests: XCTestCase {
         XCTAssertEqual(list.first?.value, 0)
     }
     
-    func testPopFront() {
+    func testPopBack() {
         XCTAssertEqual(list.popBack(), 9)
         XCTAssertEqual(list.count, 9)
         
@@ -85,7 +80,7 @@ class LinkedListTests: XCTestCase {
         XCTAssertNil(list.popBack())
     }
     
-    func testPopBack() {
+    func testPopFront() {
         XCTAssertEqual(list.popFront(), 0)
         XCTAssertEqual(list.count, 9)
         
@@ -168,10 +163,15 @@ class LinkedListTests: XCTestCase {
     static var allTests = [
         ("testAtIndex", testAtIndex),
         ("testInsert", testInsert),
+        ("testBeforeAfter", testBeforeAfter),
         ("testPushBack", testPushBack),
         ("testPushFront", testPushFront),
+        ("testPopBack", testPopBack),
+        ("testPopFront", testPopFront),
         ("testArrayValue", testArrayValue),
         ("testRemoveAll", testRemoveAll),
+        ("testRemove", testRemove),
         ("testCount", testCount),
+        ("testDescription", testDescription)
     ]
 }
