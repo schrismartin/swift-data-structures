@@ -8,17 +8,9 @@
 
 import Foundation
 
-struct Queue<Element>: ExpressibleByArrayLiteral {
+struct Queue<Element>: LinkedListInitializable {
     
     var base = LinkedList<Element>()
-    
-    init(array: [Element]) {
-        base = LinkedList(array: array)
-    }
-    
-    init(arrayLiteral elements: Element...) {
-        self.init(array: elements)
-    }
     
 }
 
