@@ -23,25 +23,7 @@ struct Queue<Element>: ExpressibleByArrayLiteral {
 }
 
 // MARK: Public Helper Values
-extension Queue {
-    
-    internal var first: Node<Element>? {
-        return base.first
-    }
-    
-    internal var last: Node<Element>? {
-        return base.last
-    }
-    
-    public var isEmpty: Bool {
-        return base.isEmpty
-    }
-    
-    public var count: Int {
-        return base.count
-    }
-    
-}
+extension Queue: LinkedListDerivative { }
 
 // MARK: Remove All
 extension Queue {

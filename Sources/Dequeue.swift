@@ -23,25 +23,7 @@ struct Dequeue<Element>: ExpressibleByArrayLiteral {
 }
 
 // MARK: Public Helper Values
-extension Dequeue {
-    
-    internal var first: Node<Element>? {
-        return base.first
-    }
-    
-    internal var last: Node<Element>? {
-        return base.last
-    }
-    
-    public var isEmpty: Bool {
-        return base.isEmpty
-    }
-    
-    public var count: Int {
-        return base.count
-    }
-    
-}
+extension Dequeue: LinkedListDerivative { }
 
 // MARK: Remove All
 extension Dequeue {
