@@ -8,31 +8,28 @@
 
 import Foundation
 
-struct Queue<Element>: LinkedListInitializable {
+/// Linked list data structure where items must be added from the back 
+/// and removed from the front, but no insertion in the middle can be
+/// performed.
+public struct Queue<Element>: LinkedListInitializable {
     
     internal var list = LinkedList<Element>()
     
 }
 
-// MARK: Public Helper Values
-extension Queue: LinkedListDerivative { }
-
-// MARK: Remove All
-extension Queue {
-    
-    public mutating func removeAll() {
-        list.removeAll()
-    }
-    
-}
-
 // MARK: Convenience Modifiers
-extension Queue {
+extension Queue: LinkedListDerivative {
     
+    /// Add an item to the back of the queue.
+    ///
+    /// - Parameter item: Element to be added.
     public mutating func pushBack(item: Element) {
         list.pushBack(item: item)
     }
     
+    /// Remove an item from the front of the queue.
+    ///
+    /// - Returns: Element removed.
     @discardableResult
     public mutating func popFront() -> Element? {
         return list.popFront()
@@ -40,19 +37,10 @@ extension Queue {
     
 }
 
-// MARK: Conversions
-extension Queue {
-    
-    var arrayValue: [Element] {
-        return list.arrayValue
-    }
-    
-}
-
 // MARK: Custom Strings
 extension Queue: CustomStringConvertible {
     
-    var description: String {
+    public var description: String {
         return list.description
     }
     

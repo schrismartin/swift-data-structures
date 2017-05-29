@@ -8,11 +8,13 @@
 
 import Foundation
 
+/// Node contaning an element to a linked list data structure.
 public final class Node<Element>: CustomStringConvertible {
     
     internal var next: Node<Element>?
     internal weak var previous: Node<Element>?
     
+    /// Value of the element contained within the node.
     public var value: Element
     
     internal var isFirst: Bool {
@@ -23,7 +25,10 @@ public final class Node<Element>: CustomStringConvertible {
         return next == nil
     }
     
-    init(value: Element) {
+    /// Create a new node containing the given value
+    ///
+    /// - Parameter value: Value to be assigned to the container node.
+    internal init(value: Element) {
         self.value = value
     }
     

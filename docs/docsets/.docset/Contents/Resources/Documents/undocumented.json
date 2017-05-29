@@ -1,0 +1,26 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/schrismartin/workspace/personal/swift-data-structures/Sources/LinkedListDerivative.swift",
+      "line": 47,
+      "symbol": "LinkedListDerivative.isEmpty",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/schrismartin/workspace/personal/swift-data-structures/Sources/LinkedListDerivative.swift",
+      "line": 51,
+      "symbol": "LinkedListDerivative.count",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/schrismartin/workspace/personal/swift-data-structures/Sources/LinkedListDerivative.swift",
+      "line": 55,
+      "symbol": "LinkedListDerivative.arrayValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/schrismartin/workspace/personal/swift-data-structures"
+}
