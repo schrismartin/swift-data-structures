@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Node Class Reference</title>
+    <title>Queue Struct Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/Node" class="dashAnchor"></a>
-    <a title="Node Class Reference"></a>
+    <a name="//apple_ref/swift/Struct/Queue" class="dashAnchor"></a>
+    <a title="Queue Struct Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a> (100% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        Node Class Reference
+        Queue Struct Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -65,14 +65,16 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Node</h1>
+            <h1>Queue</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Node</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Queue</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">LinkedListInitializable</span></code></pre>
 
                 </div>
               </div>
-            <p>Node contaning an element to a linked list data structure.</p>
+            <p>Linked list data structure where items must be added from the back 
+and removed from the front, but no insertion in the middle can be
+performed.</p>
 
           </section>
           <section class="section task-group-section">
@@ -81,9 +83,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC19SwiftDataStructures4Node5valuex"></a>
-                    <a name="//apple_ref/swift/Property/value" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC19SwiftDataStructures4Node5valuex">value</a>
+                    <a name="/s:FV19SwiftDataStructures5Queue8pushBackFT4itemx_T_"></a>
+                    <a name="//apple_ref/swift/Method/pushBack(item:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FV19SwiftDataStructures5Queue8pushBackFT4itemx_T_">pushBack(item:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -91,20 +93,74 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Value of the element contained within the node.</p>
+                        <p>Add an item to the back of the queue.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Element</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">pushBack</span><span class="p">(</span><span class="nv">item</span><span class="p">:</span> <span class="kt">Element</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>item</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Element to be added.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FV19SwiftDataStructures5Queue8popFrontFT_GSqx_"></a>
+                    <a name="//apple_ref/swift/Method/popFront()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FV19SwiftDataStructures5Queue8popFrontFT_GSqx_">popFront()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove an item from the front of the queue.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">popFront</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Element</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Element removed.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
                 <li class="item">
                   <div>
                     <code>

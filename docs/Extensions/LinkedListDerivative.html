@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Node Class Reference</title>
+    <title>LinkedListDerivative Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/Node" class="dashAnchor"></a>
-    <a title="Node Class Reference"></a>
+    <a name="//apple_ref/swift/Extension/LinkedListDerivative" class="dashAnchor"></a>
+    <a title="LinkedListDerivative Extension Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a> (100% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        Node Class Reference
+        LinkedListDerivative Extension Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -65,15 +65,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Node</h1>
+            <h1>LinkedListDerivative</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Node</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">protocol</span> <span class="kt">LinkedListDerivative</span></code></pre>
 
                 </div>
               </div>
-            <p>Node contaning an element to a linked list data structure.</p>
-
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -81,9 +80,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC19SwiftDataStructures4Node5valuex"></a>
-                    <a name="//apple_ref/swift/Property/value" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC19SwiftDataStructures4Node5valuex">value</a>
+                    <a name="/s:vE19SwiftDataStructuresPS_20LinkedListDerivative7isEmptySb"></a>
+                    <a name="//apple_ref/swift/Property/isEmpty" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE19SwiftDataStructuresPS_20LinkedListDerivative7isEmptySb">isEmpty</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -91,14 +90,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Value of the element contained within the node.</p>
+                        <p>Whether the linked list is empty.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Element</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isEmpty</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -108,9 +107,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vPs23CustomStringConvertible11descriptionSS"></a>
-                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vPs23CustomStringConvertible11descriptionSS">description</a>
+                    <a name="/s:vE19SwiftDataStructuresPS_20LinkedListDerivative5countSi"></a>
+                    <a name="//apple_ref/swift/Property/count" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE19SwiftDataStructuresPS_20LinkedListDerivative5countSi">count</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -118,13 +117,68 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Number of elements in the structure.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE19SwiftDataStructuresPS_20LinkedListDerivative10arrayValueGSawx7Element_"></a>
+                    <a name="//apple_ref/swift/Property/arrayValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE19SwiftDataStructuresPS_20LinkedListDerivative10arrayValueGSawx7Element_">arrayValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Array variant of the queue.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">arrayValue</span><span class="p">:</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE19SwiftDataStructuresPS_20LinkedListDerivative9removeAllFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/removeAll()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE19SwiftDataStructuresPS_20LinkedListDerivative9removeAllFT_T_">removeAll()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove all elements in the structure.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">removeAll</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
